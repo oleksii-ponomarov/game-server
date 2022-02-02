@@ -3,6 +3,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.get("/", (_req, res) => {
+  res.set({ "Access-Control-Allow-Origin": "*" });
   res.json({
     easyMode: {
       field: 5,
